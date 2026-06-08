@@ -45,16 +45,16 @@ class Norma:
                     if opper == 'ADD':
                         self.add(register)
                         current_opper = int(self.opperations[opperation][2])
-                        print('> add.')
+                        print(f'> faça add({register}) va_para {current_opper}')
                         continue
 
                     elif opper == 'SUB':
                         self.sub(register)
                         current_opper = int(self.opperations[opperation][2])
-                        print('> sub.')
+                        print(f'> faça sub({register}) va_para {current_opper}')
                         continue
 
                     current_opper = int(self.opperations[opperation][2]) if self.is_zero(register) else int(self.opperations[opperation][3])
-                    print('> is zero.')
+                    print(f'> se zer({register}) então va_para {self.opperations[opperation][2]} se não va_para {self.opperations[opperation][3]}')
                     continue
         return
