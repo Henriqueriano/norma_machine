@@ -29,9 +29,16 @@ class Norma:
     def is_zero(self, label: str) -> bool:
         return self.registrars[label] == 0
 
+    def show_tuple_registrars(self) -> tuple:
+        bucket: list[int] = []
+        for register in self.registrars:
+            bucket.append(self.registrars[register])
+        return tuple(bucket)
+
     def work(self) -> None:
         working: bool = True
         current_opper: int = 1 # Starts on fisrt.
+        print(f'{self.show_tuple_registrars()}, M)')
         while working:
             if current_opper not in self.opperations:
                 print('> steps outside the machine.')
@@ -44,17 +51,17 @@ class Norma:
 
                     if opper == 'ADD':
                         self.add(register)
+                        print(f'> {self.show_tuple_registrars()},{current_opper}) faça add({register}) va_para {int(self.opperations[opperation][2])}')
                         current_opper = int(self.opperations[opperation][2])
-                        print(f'> faça add({register}) va_para {current_opper}')
                         continue
 
                     elif opper == 'SUB':
                         self.sub(register)
+                        print(f'> {self.show_tuple_registrars()},{current_opper}) faça sub({register}) va_para {int(self.opperations[opperation][2])}')
                         current_opper = int(self.opperations[opperation][2])
-                        print(f'> faça sub({register}) va_para {current_opper}')
                         continue
 
+                    print(f'> {self.show_tuple_registrars()},{current_opper}) se zer({register}) então va_para {int(self.opperations[opperation][2])} se não va_para {int(self.opperations[opperation][3])}')
                     current_opper = int(self.opperations[opperation][2]) if self.is_zero(register) else int(self.opperations[opperation][3])
-                    print(f'> se zer({register}) então va_para {self.opperations[opperation][2]} se não va_para {self.opperations[opperation][3]}')
                     continue
         return

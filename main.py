@@ -7,7 +7,7 @@ from lib.norma_utils import (
         update_register,
         load_opperation_file,
         show_registers,
-        show_opperations
+        show_opperations,
         )
 
 def main() -> None:
@@ -41,7 +41,7 @@ def main() -> None:
                         shell=True)
 
     # Loading the file.
-    file_path: str = str(input('> named file in assets folder: '))
+    file_path: str = str(input('> named file in assets folder (relative path): '))
     load_opperation_file(machine = machine, file_path = file_path)
 
     print('> loaded opperations: ')
@@ -50,15 +50,12 @@ def main() -> None:
     print(f'> starting the machine after {delay}s!')
     sleep(delay)
     machine.work()
-    show_registers(machine=machine)
 
    
 if __name__ == '__main__':
     working: bool = True
     while working: # main loop
         try:
-            # subprocess.run('cls' if os.name == 'nt' else 'clear',
-            #                shell=True)
             main()
             working = False
 
