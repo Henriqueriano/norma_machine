@@ -24,12 +24,15 @@ def show_opperations(machine: norma.Norma) -> None:
      print(machine.opperations)
 
 def load_opperation_file(machine: norma.Norma, file_path: str) -> None:
-    path : str = './assets/'+file_path
+    path : str = './assets/'+file_path+'/macro'
     bucket: dict[int, list[str]] = {}
-    with open(path, 'r') as file:
-         for line in file:
-            if not line.strip():
-                continue
-            norm: list[str] = line.strip().split()
-            bucket[int(norm[0])] = [norm[i] for i in range(1, len(norm))]
-    machine.opperations = bucket
+    try:
+        with open(path, 'r') as file:
+            for line in file:
+                if not line.strip():
+                    continue
+                norm: list[str] = line.strip().split()
+                bucket[int(norm[0])] = [norm[i] for i in range(1, len(norm))]
+        machine.opperations = bucket
+    except FileNotFoundError:
+         print('> file not found on assets folder.')

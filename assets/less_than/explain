@@ -1,0 +1,4 @@
+Assumindo que a máquina norma não armazena números negativos.
+Realizei de subtrações consecutivas em abos os registradores
+até zerar o registrador A, se por ventura sobrasse valores no
+registrador B, eu teria a certeza de que A < B. 

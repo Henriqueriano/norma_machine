@@ -1,0 +1,7 @@
+1 ZER B 4 2
+    2 ADD A 3
+    3 SUB B 1
+    
+4 ZER A 100 5
+    5 SUB A 6
+    6 ADD C 4

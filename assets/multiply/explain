@@ -1,0 +1,3 @@
+Partindo do uso de 4 registradores. Utilizei de dois auxiliares
+para também manter os valores do registrador B em memória armazenados 
+no registrador D.

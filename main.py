@@ -12,7 +12,7 @@ from lib.norma_utils import (
 
 def main() -> None:
     # Setup some stuffs
-    delay: int = 5
+    delay: int = 0
 
     # Allocating machine.
     machine : Norma = Norma()
@@ -37,11 +37,11 @@ def main() -> None:
         .strip()
         if again == 'n':
             updating = False
-        subprocess.run('cls' if os.name == 'nt' else 'clear',
+            subprocess.run('cls' if os.name == 'nt' else 'clear',
                         shell=True)
 
     # Loading the file.
-    file_path: str = str(input('> named file in assets folder (relative path): '))
+    file_path: str = str(input('> named folder in assets: '))
     load_opperation_file(machine = machine, file_path = file_path)
 
     print('> loaded opperations: ')
@@ -53,6 +53,8 @@ def main() -> None:
 
    
 if __name__ == '__main__':
+    subprocess.run('cls' if os.name == 'nt' else 'clear',
+                    shell=True)
     working: bool = True
     while working: # main loop
         try:

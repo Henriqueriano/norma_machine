@@ -1,0 +1,19 @@
+1 ZER A 100 2
+2 ZER B 3 5
+    3 ZER A 100 4
+        4 SUB A 3
+
+5 ZER A 8 6
+    6 ADD C 7
+    7 SUB A 5
+
+8 ZER C 100 9
+    9 SUB C 10
+    10 ZER B 14 11
+        11 SUB B 12
+        12 ADD A 13
+        13 ADD D 10
+
+14 ZER D 8 15
+    15 SUB D 16
+    16 ADD B 14
