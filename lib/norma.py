@@ -23,6 +23,8 @@ class Norma:
         return
 
     def sub(self, label: str) -> None:
+        if self.registrars[label] - 1 < 0:
+            raise ValueError(f'> normas machine cannot randle negative numbers ( register {label}).')
         self.registrars[label] -= 1
         return
 

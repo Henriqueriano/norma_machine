@@ -4,7 +4,7 @@ def allocate_in_norma(machine: norma.Norma, qt: int) -> norma.Norma:
     if qt < 8:
         print('> alocating 8 base registrars . . .')
     if qt > 8:
-        print(f'> alocating {qt} registrars . . .')
+        print(f'> alocating {qt} registrars (8 base + {qt - 8} aux). . .')
         for i in range(73, 65 + qt):
             new: chr = chr(i)
             machine.push_register(new)
@@ -31,6 +31,8 @@ def load_opperation_file(machine: norma.Norma, file_path: str) -> None:
             for line in file:
                 if not line.strip():
                     continue
+                elif line.__contains__('&'): # KKKKKKKKKKKKKKKKKKKK here, I'm genius 
+                     continue
                 norm: list[str] = line.strip().split()
                 bucket[int(norm[0])] = [norm[i] for i in range(1, len(norm))]
         machine.opperations = bucket

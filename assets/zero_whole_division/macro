@@ -1,5 +1,9 @@
+& division by zero error handler
 1 ZER B 100 2
-2 ZER B 100 3
-    3 ADD C 4
-    4 ADD D 5
-    5 SUB B 2
+
+& division block
+2 ZER A 100 3
+    3 ZER B 6 4
+        4 SUB B 5
+        5 SUB A 3
+    6 SUB A 2
