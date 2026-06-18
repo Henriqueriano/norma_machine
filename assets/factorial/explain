@@ -1,7 +1,8 @@
 O Fatorial é uma série de multiplicações iterativas na forma:
 (X - n) * (X - (n - 1)) * ... * X.
 
-Para tanto, utilizei de loopings e loopings aninhados testando 
-os valores de registradores específicos em zero.
+Para tanto, utilizei de loopings e loopings aninhados 
+multiplicativos efetuando também testes se 
+os valores de registradores específicos eram zero.
 
 Mantendo a resposta do fatorial no registrador A.

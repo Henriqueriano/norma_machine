@@ -1,3 +1,20 @@
+& check if A is zero or 1
 1 ZER A 100 2
-    
+2 SUB A 3
+3 ZER A 100 4
+4 ADD A 5
 
+& to A >= 2
+5 ZER A 9 6
+    6 ADD C 7
+    7 ADD D 8
+    8 SUB A 5
+
+9 ZER D 12 10
+    10 ADD A 11
+    11 SUB D 9
+
+12 ADD B 13
+13 ADD B 14
+14 SUB C 15
+15 SUB C 16 

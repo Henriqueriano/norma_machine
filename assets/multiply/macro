@@ -1,4 +1,6 @@
+& check if is the multiply by zero.
 1 ZER A 100 2
+
 2 ZER B 3 5
     3 ZER A 100 4
         4 SUB A 3

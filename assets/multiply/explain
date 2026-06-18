@@ -1,3 +1,6 @@
-Partindo do uso de 4 registradores. Utilizei de dois auxiliares
-para também manter os valores do registrador B em memória armazenados 
-no registrador D.
+    Esta macro parte da adoção do uso de 4 registradores,
+onde, dois são auxiliares e dois são responsáveis por 
+armazenar os vlaores das operações.
+
+(A x B), utilizando C como um "contador" e um buffer
+para armazenar o valor de B para posteriormente devolve-lo.

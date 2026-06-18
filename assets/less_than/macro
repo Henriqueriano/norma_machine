@@ -1,9 +1,12 @@
+& verify if the first value is 0 and the second is more than 0.
 1 ZER A 2 4
     2 ZER B 100 3
         3  ADD C 100
 
+& if B is zero and A not is, A > B
 4 ZER B 100 5
 
+& iterative subtraction in the A and B
 5 ZER A 100 6
     6 SUB A 7
     7 SUB B 8

@@ -1,0 +1,14 @@
+    Esta macro realiza a divisão do valor alocado 
+no registrador A pelo registrador B, onde:
+
+>   Primeiro o algoritmo checa se o divisor é 0,
+se for, termina a operação imediatamente.
+
+>   E depois realiza subtrações sucessivas no 
+registrador A a partir do valor B.
+
+>   E em último passo realiza a verificação do 
+registrador A quando o mesmo chega a 0 e também 
+verifica se há algum valor no registrador C que 
+é o responsável por armazenar a parcela da operação.
+
